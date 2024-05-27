@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DemoSuite">
+	<test name="OrangeHRMTC001" enabled="false">
+		<parameter name="browserName" value="edge" />
+		<parameter name="url"
+			value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+		<parameter name="username" value="Admin" />
+		<parameter name="password" value="admin123" />
+		<classes>
+			<class name="com.OrangeHRM.practice.TC001">
+				<methods>
+					<include name="initializeBrowser" />
+					<include name="launchApplication" />
+					<include name="enterLoginDetails" />
+					<include name="navigateMyInfo" />
+					<include name="verifyLogin" />
+					<include name="logout" />
+					<include name="tearDown" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="OrangeHRMTC002" enabled="false">
+		<parameter name="browserName" value="firefox" />
+		<parameter name="url"
+			value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login" />
+		<parameter name="username" value="Admin" />
+		<parameter name="password" value="admin123" />
+		<classes>
+			<class name="com.OrangeHRM.practice.TC001">
+				<methods>
+					<include name="initializeBrowser" />
+					<include name="launchApplication" />
+					<include name="enterLoginDetails" />
+					<include name="navigateMyInfo" />
+					<include name="verifyMyInfo" />
+					<include name="verifyLogin" />
+					<include name="logout" />
+					<include name="tearDown" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Google Test TC001" enabled="true">
+		<classes>
+			<class name="com.sushanth.practice.TestGoogle">
+				<methods>
+					<include name="testGoogle" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+			<test name="Google Test TC001" enabled="false">
+		<classes>
+			<class name="com.sushanth.practice.TestGoogle">
+				<methods>
+					<include name="testAmazon" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

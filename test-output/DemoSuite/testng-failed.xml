@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="OrangeHRMTC001(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browserName" value="edge"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="com.OrangeHRM.practice.TC001">
+        <methods>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
+          <include name="verifyLogin"/>
+        </methods>
+      </class> <!-- com.OrangeHRM.practice.TC001 -->
+    </classes>
+  </test> <!-- OrangeHRMTC001(failed) -->
+  <test thread-count="5" name="OrangeHRMTC002(failed)">
+    <parameter name="password" value="admin123"/>
+    <parameter name="browserName" value="firefox"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+    <parameter name="username" value="Admin"/>
+    <classes>
+      <class name="com.OrangeHRM.practice.TC001">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyMyInfo"/>
+          <include name="initializeBrowser"/>
+          <include name="verifyLogin"/>
+        </methods>
+      </class> <!-- com.OrangeHRM.practice.TC001 -->
+    </classes>
+  </test> <!-- OrangeHRMTC002(failed) -->
+</suite> <!-- Failed suite [DemoSuite] -->
